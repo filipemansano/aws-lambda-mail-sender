@@ -1,0 +1,25 @@
+{
+    "name": "delete-test-01",
+    "description": "delete-test-01-description",
+    "version": "0.0.1",
+    "private": true,
+    "devDependencies": {
+        "@aws-sdk/client-ses": "^3.433.0",
+        "@types/busboy": "^1.5.2",
+        "@types/nodemailer": "^6.4.13",
+        "@types/aws-lambda": "^8.10.111",
+        "@types/node": "^18.14.6",
+        "typescript": "^4.9.5"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "compile": "tsc --build tsconfig.json",
+        "generate:layers": "cp package.json ./layers/nodejs && npm install --prefix=./layers/nodejs --omit=dev",
+        "deploy": "sam deploy",
+        "watch": "tsc --watch"
+    },
+    "dependencies": {
+        "busboy": "^1.6.0",
+        "nodemailer": "^6.9.7"
+    }
+}
